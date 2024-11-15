@@ -29,6 +29,9 @@
           homebrew = {
             enable = true;
             brews = [
+                "chezmoi"
+                "gh"
+                "gitmoji"
                 "mas"
             ];
             casks = [
@@ -37,9 +40,15 @@
                 "betterdisplay"
                 "iina"
             ];
-            masApps = [
+            masApps = {
                 "KakaoTalk" = 869223134;
-            ];
+                "LINE" = 539883307;
+                "Microsoft Teams" = 1113153706;
+                "Microsoft Outlook" = 985367838;
+                "Microsoft Word" = 462054704;
+                "Microsoft Excel" = 462058435;
+                "Microsoft PowerPoint" = 462062816;
+            };
             onActivation.cleanup = "zap";
           };
 
