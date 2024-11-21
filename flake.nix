@@ -25,6 +25,7 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
+            pkgs.btop
             pkgs.chezmoi
             pkgs.curl
             pkgs.discord
@@ -39,11 +40,13 @@
             pkgs.iterm2
             pkgs.kubectl
             pkgs.mas
+            pkgs.minikube
             pkgs.mkalias
             pkgs.mos
             pkgs.neovim
             pkgs.nixpkgs-fmt
             pkgs.obsidian
+            pkgs.podman
             pkgs.postman
             pkgs.pre-commit
             pkgs.raycast
@@ -104,9 +107,8 @@
                 "/Applications/Zen Browser.app"
                 "/Applications/Proton Mail.app"
                 "/System/Applications/Messages.app"
-                "${pkgs.discord}/Applications/Discord.app"
                 "/Applications/Warp.app"
-                "${pkgs.vscode}/Applications/Visual Studio Code.app"
+                "/Applications/Windsurf.app"
                 "/Applications/Xcode.app"
                 "${pkgs.obsidian}/Applications/Obsidian.app"
             ];
