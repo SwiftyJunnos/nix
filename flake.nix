@@ -29,6 +29,7 @@
             pkgs.chezmoi
             pkgs.curl
             pkgs.discord
+	    pkgs.dive
             pkgs.fastfetch
             pkgs.gh
             pkgs.gifski
@@ -74,6 +75,7 @@
                 "figma"
                 "huly"
                 "iina"
+                "jordanbaird-ice"
                 "notchnook"
                 "notion"
                 "nvidia-geforce-now"
