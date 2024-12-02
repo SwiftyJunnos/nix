@@ -25,6 +25,8 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
+	    pkgs.arc-browser
+	    pkgs.bear
             pkgs.btop
             pkgs.chezmoi
             pkgs.curl
@@ -41,7 +43,6 @@
             pkgs.iterm2
             pkgs.kubectl
             pkgs.mas
-            pkgs.minikube
             pkgs.mkalias
             pkgs.mos
             pkgs.neovim
@@ -52,8 +53,7 @@
             pkgs.pre-commit
             pkgs.raycast
             pkgs.slack
-            pkgs.tableplus
-            pkgs.vscode
+	    pkgs.tree
             pkgs.watch
             pkgs.zoom-us
           ];
@@ -71,7 +71,6 @@
                 "1password-cli"
                 "aldente"
                 "betterdisplay"
-                "cursor"
                 "figma"
                 "huly"
                 "iina"
@@ -80,7 +79,7 @@
                 "notion"
                 "nvidia-geforce-now"
                 "orbstack"
-                "proton-mail"
+		"pearcleaner"
                 "warp"
                 "zed"
             ];
@@ -92,6 +91,7 @@
                 "Microsoft Word" = 462054704;
                 "Microsoft Excel" = 462058435;
                 "Microsoft PowerPoint" = 462062816;
+		"Perplexity" = 6714467650;
                 "PiPer" = 1421915518;
             };
             onActivation.cleanup = "zap";
@@ -106,8 +106,8 @@
 
           system.defaults = {
             dock.persistent-apps = [
-                "/Applications/Zen Browser.app"
-                "/Applications/Proton Mail.app"
+                "${pkgs.arc-browser}/Applications/Arc.app"
+		"/System/Applications/Mail.app"
                 "/System/Applications/Messages.app"
                 "/Applications/Warp.app"
                 "/Applications/Windsurf.app"
